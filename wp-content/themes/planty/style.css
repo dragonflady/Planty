@@ -11,18 +11,141 @@
  Tags:         accessibility-ready, one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
  Text Domain:  blankslate
 */
-#site-title a.logo-brand img {
+
+:root {
+    --main-color: #ECE2DA;
+    --main-bg-color: #3B8E46;
+    --hover-color: #C02E44;
+}
+
+body {
+    font-family: 'Syne', sans-serif;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+}
+
+#site-title {
+   position: absolute; 
+   padding-top: 30px; 
+}
+
+#site-title a.logo-brand img, .custom-logo-link img {
     width: 201px;
     height: 19px;
-    margin: 31px 0 0 37px;
 }
 
+/* Style de base pour le conteneur du menu */
 #menu {
    display: flex; 
-   justify-content: space-around;
+   flex-direction: row;
+   justify-content: end;
+   align-items: center;
+   position: relative;
+   top: 5px;
+   height: 80px;
 }
 
+/* Style pour le menu ul */
 .site__header__menu {
-    list-style: none;
     display: flex;
+    flex-direction: row;
+    margin: 0;
+    list-style: none;
+}
+
+/* Style pour chaque élément li du menu */
+.site__header__menu li {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* Style pour les liens du menu */
+.site__header__menu a {
+    text-decoration: none;
+    color: inherit;
+} 
+
+/* Style pour les liens du menu au survol */
+.site__header__menu a:hover {
+    font-weight: 700;
+    font-size: 13px;
+} 
+
+/* Style pour le liens du menu commande */
+#menu-item-14 a {
+    position: relative;
+    background-color:#DC9F96;
+    color: white;
+    font-weight: 700;
+    padding: 50px;
+    
+}
+
+/* Style pour le liens du menu commande au survol */
+#menu-item-14 a:hover {
+    font-size: 16px;
+    background-color: #C02E44;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--main-color);
+    color: #3B8E46;
+    font-size: 38px;
+    font-weight: 800;
+    padding:40px 0 20px 0;
+    margin: 0 0 20px 0;
+}
+
+/* Style pour le titre principal */
+.title-boisson {
+    width: 1440px;
+    display: none;
+    display: flex;
+    flex-direction: column;
+    margin-left: -150px;
+}
+
+
+
+.title-testimony {
+   padding-bottom:50px;
+}
+
+
+.bg-img-gouts {
+    background-color: var(--main-color);
+ }
+ 
+.title-testimonial h3 {
+    color: var(--main-bg-color);
+}
+
+.canettes {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 60px;
+}
+
+#menu-menu-bas-de-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+#menu-item-18 a {
+    color: inherit;
+    text-decoration: none;
 }

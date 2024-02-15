@@ -25,6 +25,6 @@ array(
 );
 register_nav_menus( array(
     'main-menu' => 'Menu principal',
-    'footer' => 'Bas de page',
+    'footer-menu' => 'Bas de page',
 )
 );

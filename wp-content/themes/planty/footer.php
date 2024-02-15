@@ -2,12 +2,12 @@
 </div>
 <footer id="footer" role="contentinfo">
 <div id="copyright">
-Mentions légales
+<?php wp_nav_menu(array( 
+    'theme_location' => 'footer-menu', 
+    'menu_class' => 'site__footer__menu' ) ); ?>
 </div>
 </footer>
 </div>
-<?php wp_footer(array( 
-    'theme_location' => 'footer-menu', 
-    'menu_class' => 'site__footer__menu' ) ); ?>
+<?php wp_footer(); ?>
 </body>
 </html>
