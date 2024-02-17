@@ -3,3 +3,7 @@
 <?php the_content(); ?>
 </div>
 <?php get_footer(); ?>
+<ul>
+    lix3
+    
+</ul>

@@ -16,6 +16,7 @@
     --main-color: #ECE2DA;
     --main-bg-color: #3B8E46;
     --hover-color: #C02E44;
+    --title-color: #D2776A;
 }
 
 body {
@@ -64,6 +65,7 @@ body {
 .site__header__menu a {
     text-decoration: none;
     color: inherit;
+    padding-right: 180px;
 } 
 
 /* Style pour les liens du menu au survol */
@@ -109,25 +111,111 @@ h1 {
     margin-left: -150px;
 }
 
-
-
-.title-testimony {
-   padding-bottom:50px;
+.container-canette {
+    background-color: var(--main-color);
 }
 
+.canette {
+    margin-left: -80px;
+    margin-top: 50px;
+    padding-bottom: 40px;
+}
+
+.img-leaf-left {
+   position: absolute;
+    
+}
+
+.title-nrj-plantes h2 {
+    color: var(--main-bg-color);
+}
+
+.title-gouts {
+    color: var(--title-color);
+    font-size: 30px;
+    font-weight: 800;
+    padding-top: 50px;
+}
+
+.p-gouts p {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.bg-title-gouts {
+    background-color: var(--main-color);
+}
+
+.img-gouts {
+    width: 394px;
+    height: 263px;
+    padding: 10px;
+}
 
 .bg-img-gouts {
     background-color: var(--main-color);
  }
+
+ #button-commander {
+    width: 198px;
+    height: 55px;
+    border-radius: 5px;  
+ }
+
+ .bg-button {
+    background-color: var(--main-color);
+    padding: 20px 0 50px 0;
+ }
  
+ .title-testimony h2 {
+    color: var(--main-bg-color);
+    padding-bottom: 50px;
+}
+
 .title-testimonial h3 {
     color: var(--main-bg-color);
+    font-size: 30px;
+    font-weight: 200;
+    padding-top: 20px;
+}
+
+.p-testimonial p {
+    margin-top: -10px;
 }
 
 .canettes {
     display: flex;
     flex-direction: row;
     max-width: 100%;
+}
+
+/* Section Nous rencontrer */
+
+.bg-nous-rencontrer {
+    background-color: var(--main-color);
+}
+
+/* .container-rencontrer img {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+
+}
+
+.img-nous-rencontrer img{
+    position: relative;
+    right: 350px;
+} */
+
+.bg-nous-contacter {
+    background-color: var(--main-color);
+}
+
+/* image canettes bas de page */
+.bg-canettes {
+    background-color: var(--main-color);
 }
 
 #footer {
