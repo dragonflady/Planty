@@ -295,15 +295,22 @@ h1 {
 
 .commande {
     text-align: center;
+    display: flex;
 }
 
 .commande h2 {
     text-align: left;
 }
 
-.images {
+.image-container {
+    background-color: var(--main-bg-color);
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.images {
+    margin-bottom: 20px;
 }
 
 .images img {
@@ -312,18 +319,13 @@ h1 {
 }
 
 .quantite {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-.quantite input {
-    width: 39px;
-    height: 56px;
+    width: 39px !important;
+    height: 56px !important;
     padding: 5px;
-    margin-bottom: 10px;
+    text-align: center; /* Centrer le texte dans les champs de quantité */
 }
 
+/* Section formulaire */
 .formulaires {
     display: flex;
     justify-content: space-around;
