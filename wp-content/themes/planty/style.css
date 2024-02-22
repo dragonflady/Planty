@@ -20,12 +20,13 @@
 }
 
 body {
-    font-family: 'Syne', sans-serif;
+    font-family: Syne, sans-serif;
     width: 100%;
     max-width: 1440px;
     margin: auto;
 }
 
+/* LOGO PLANTY */
 #site-title {
    position: absolute; 
    padding-top: 30px; 
@@ -34,9 +35,11 @@ body {
 #site-title a.logo-brand img, .custom-logo-link img {
     width: 201px;
     height: 19px;
+    padding-left: 40px;
 }
 
-/* Style de base pour le conteneur du menu */
+        /* MENU */
+/* Section conteneur du menu */
 #menu {
    display: flex; 
    flex-direction: row;
@@ -61,20 +64,20 @@ body {
     font-size: 16px;
 }
 
-/* Style pour les liens du menu */
+/* Liens du menu */
 .site__header__menu a {
     text-decoration: none;
     color: inherit;
     padding-right: 180px;
 } 
 
-/* Style pour les liens du menu au survol */
+/* Liens du menu au survol */
 .site__header__menu a:hover {
     font-weight: 700;
     font-size: 13px;
 } 
 
-/* Style pour le liens du menu commande */
+/* Liens du menu commande */
 #menu-item-14 a {
     position: relative;
     background-color:#DC9F96;
@@ -84,25 +87,13 @@ body {
     
 }
 
-/* Style pour le liens du menu commande au survol */
+/* Liens du menu commande au survol */
 #menu-item-14 a:hover {
     font-size: 16px;
     background-color: #C02E44;
 }
-
-h1 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background-color: var(--main-color);
-    color: #3B8E46;
-    font-size: 38px;
-    font-weight: 800;
-    padding:40px 0 20px 0;
-    margin: 0 0 20px 0;
-}
-
-/* Style pour le titre principal */
+        /* ACCUEIL */
+/* Section conteneur du titre principal */
 .title-boisson {
     width: 1440px;
     display: none;
@@ -111,23 +102,35 @@ h1 {
     margin-left: -150px;
 }
 
-.container-canette {
+/* Section titre principal */
+h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
     background-color: var(--main-color);
+    color: #3B8E46;
+    font-size: 38px;
+    font-weight: 800;
+    padding:100px 0 20px 0;
+    margin: 0;
 }
 
-.canette {
-    margin-left: -80px;
-    margin-top: 50px;
-    padding-bottom: 40px;
-}
-
-.img-leaf-left {
-   position: absolute;
-    
+.canette-container {
+    background-color: var(--main-color);
+    padding: 70px 0 40px 0;
 }
 
 .title-nrj-plantes h2 {
     color: var(--main-bg-color);
+}
+
+.p-nrj {
+    padding-bottom: 30px;
+}
+
+/* Section goûts */
+.bg-title-gouts {
+    background-color: var(--main-color);
 }
 
 .title-gouts {
@@ -143,9 +146,9 @@ h1 {
     font-size: 20px;
 }
 
-.bg-title-gouts {
+.bg-img-gouts {
     background-color: var(--main-color);
-}
+ }
 
 .img-gouts {
     width: 394px;
@@ -153,34 +156,37 @@ h1 {
     padding: 10px;
 }
 
-.bg-img-gouts {
+/* Section bouton Commander */
+.bg-button {
     background-color: var(--main-color);
+    padding: 20px 0 50px 0;
  }
-
- #button-commander {
+ #button-commander  {
     width: 198px;
     height: 55px;
     border-radius: 5px;  
  }
 
- .bg-button {
-    background-color: var(--main-color);
-    padding: 20px 0 50px 0;
+ .elementor-button span {
+    padding-top: 2px 
  }
  
+ /* Section témoignages */
  .title-testimony h2 {
     color: var(--main-bg-color);
     padding-bottom: 50px;
 }
 
-.title-testimonial h3 {
+.title-testimonial  {
     color: var(--main-bg-color);
     font-size: 30px;
-    font-weight: 200;
+    font-weight: 700;
     padding-top: 20px;
 }
 
 .p-testimonial p {
+    text-align: start;
+    font-size: 16px;
     margin-top: -10px;
 }
 
@@ -190,34 +196,182 @@ h1 {
     max-width: 100%;
 }
 
-/* Section Nous rencontrer */
-
-.bg-nous-rencontrer {
+/*NOUS RENCONTRER */
+.image-container, .nous-rencontrer-container {
     background-color: var(--main-color);
 }
 
-/* .container-rencontrer img {
+.title-nous-rencontrer h1 {
+    background: none;
+    color: var(--title-color);
+    font-size: 38px;
+    font-weight: 800;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    
-
+    justify-content: center; 
+    padding-bottom: 10px;  
 }
 
-.img-nous-rencontrer img{
-    position: relative;
-    right: 350px;
-} */
+.p-nous-rencontrer p {
+    display: flex;
+    text-align: center;
+    font-size: 20px;
+    margin: 0 215px 20px 215px;
+}
 
+/* Section équipe */
+.title-equipe, h2 {
+    margin-top: 50px;
+    padding-bottom: 30px;
+    font-weight: 700;
+}
+
+.elementor-10 .elementor-element.elementor-element-63ba6d8  {
+    margin-right: 150px;
+}
+
+.elementor-10 .elementor-element.elementor-element-6c18f63 {
+    margin-right: 150px;
+}
+.membres-equipe {
+    padding-bottom: 50px !important;
+}
+
+.membres-equipe, h3, p {
+    text-align: center;
+}
+
+.membres-equipe, p {
+    margin-top: 0;
+}
+.elementor-heading-title h2 {
+    text-align: center;
+}
+
+/* FORMULAIRE DE CONTACT */
 .bg-nous-contacter {
     background-color: var(--main-color);
+    margin-top: 0 !important;  
 }
+
+.form-contacter h3 {
+    padding-bottom: 30px;
+}
+
+.page-id-10 .wpcf7-text, .wpcf7-textarea {
+    margin-top: 13px !important;
+}
+.wpcf7-spinner{
+    display: none;
+}
+
+#label-nom, #label-email, #label-message {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-send {
+    display: flex;
+    justify-content: center;
+}
+        /* COMMANDER */
+
+/* FORMULAIRE */
+/* form {
+    background-color: var(--main-bg-color);
+    color: white;
+} */
+
+.bg-commander, h1 {
+    background-color: var(--main-bg-color);
+    color: white;
+    padding: 40px 0 80px 0;
+}
+
+.divider {
+    border: 0 solid white;
+    width: 860px;
+    border-top-width: 1px ;
+}
+
+.commande {
+    text-align: center;
+}
+
+.commande h2 {
+    text-align: left;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.images img {
+    width: 192px;
+    height: 128px;
+}
+
+.quantite {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.quantite input {
+    width: 39px;
+    height: 56px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.formulaires {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.formulaires h2 {
+    margin-bottom: 20px;
+}
+
+.formulaires form {
+    width: 200px;
+}
+
+.formulaires input {
+    width: 383px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+}
+
+.commander {
+    display: flex;
+    align-items: center;
+    padding: 9px 57px 9px 56px;
+    background-color: #E0B9B4;
+    color: white;
+    font-size: 15px;
+}
+
+.commander:hover {
+    background-color: var(--hover-color);
+}
+
+/* .title-commander h1 {
+    background: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+} */ 
+
 
 /* image canettes bas de page */
 .bg-canettes {
     background-color: var(--main-color);
 }
-
+        /* FOOTER */
 #footer {
     display: flex;
     flex-direction: row;

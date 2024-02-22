@@ -23,8 +23,11 @@ array(
     'unlink-homepage-logo' => true,
 )
 );
+
 register_nav_menus( array(
     'main-menu' => 'Menu principal',
     'footer-menu' => 'Bas de page',
 )
 );
+
+add_filter('wpcf7_autop_or_not', '__return_false');
