@@ -31,3 +31,15 @@ register_nav_menus( array(
 );
 
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+function add_admin_button($items, $args){
+    if (is_user_logged_in() && $args->theme_location == 'main-menu') {
+    $admin_link = '<li class="menu-item"><a href="' . site_url() .'/wp-admin/">Admin</a></li>';
+    $menu_items = explode('</li>', $items);
+    $insert_index = 1;
+    array_splice($menu_items, $insert_index, 0, $admin_link);
+    $items = implode('</li>', $menu_items);
+    }
+return $items;
+}
+add_filter('wp_nav_menu_items', 'add_admin_button', 10, 2);

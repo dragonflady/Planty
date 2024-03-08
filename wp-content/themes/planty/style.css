@@ -11,8 +11,8 @@
  Tags:         accessibility-ready, one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
  Text Domain:  blankslate
 */
-
 :root {
+
     --main-color: #ECE2DA;
     --main-bg-color: #3B8E46;
     --hover-color: #C02E44;
@@ -27,15 +27,29 @@ body {
 }
 
 /* LOGO PLANTY */
-#site-title {
-   position: absolute; 
-   padding-top: 30px; 
+#header {
+   display: flex;
+   justify-content: space-between; 
+   height: 80px;
 }
 
-#site-title a.logo-brand img, .custom-logo-link img {
+.logo-brand a {
+    margin: auto;
+}
+
+.custom-logo-link {
+    margin: auto;
+}
+
+.custom-logo-link img {
     width: 201px;
     height: 19px;
-    padding-left: 40px;
+}
+
+.logo-brand {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
 }
 
         /* MENU */
@@ -45,8 +59,6 @@ body {
    flex-direction: row;
    justify-content: end;
    align-items: center;
-   position: relative;
-   top: 5px;
    height: 80px;
 }
 
@@ -56,6 +68,19 @@ body {
     flex-direction: row;
     margin: 0;
     list-style: none;
+    padding: 0;
+}
+#menu ul {
+    height: 100%;
+}
+
+#menu ul li {
+    padding: 20px;
+    display: flex;
+}
+
+#menu ul li a {
+    margin: auto;
 }
 
 /* Style pour chaque élément li du menu */
@@ -64,11 +89,15 @@ body {
     font-size: 16px;
 }
 
+#menu ul li {
+    display: flex;
+    flex-direction: row-reverse;   
+}
+
 /* Liens du menu */
 .site__header__menu a {
     text-decoration: none;
     color: inherit;
-    padding-right: 180px;
 } 
 
 /* Liens du menu au survol */
@@ -78,34 +107,35 @@ body {
 } 
 
 /* Liens du menu commande */
+#menu-item-14  {
+    background-color: #DC9F96;
+    width: 180px;
+}
+
 #menu-item-14 a {
-    position: relative;
-    background-color:#DC9F96;
+    margin: auto;
     color: white;
     font-weight: 700;
-    padding: 50px;
-    
 }
 
 /* Liens du menu commande au survol */
-#menu-item-14 a:hover {
+#menu-item-14 a:hover, #menu-item-14:hover {
     font-size: 16px;
     background-color: #C02E44;
 }
+
         /* ACCUEIL */
 /* Section conteneur du titre principal */
-.bg-boisson h1 {
+#bg-boisson {
     background-color: var(--main-color);
+    width: 100%;
+    max-width: 1440px;
+    color: var(--main-bg-color); 
 }
 
 
 .title-boisson h1 {
     color: var(--main-bg-color);
-    width: 1440px;
-    display: none;
-    display: flex;
-    flex-direction: column;
-    margin-left: -150px;
     padding-top: 100px;
 }
 
@@ -144,6 +174,8 @@ h1 {
     display: flex;
     justify-content: center;
     font-size: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
 }
 
 .bg-img-gouts {
@@ -177,11 +209,12 @@ h1 {
     padding-bottom: 50px;
 }
 
-.title-testimonial  {
+.title-testimonial h3 {
     color: var(--main-bg-color);
     font-size: 30px;
     font-weight: 700;
     padding-top: 20px;
+    text-align: left;
 }
 
 .p-testimonial p {
@@ -190,10 +223,8 @@ h1 {
     margin-top: -10px;
 }
 
-.canettes {
-    display: flex;
-    flex-direction: row;
-    max-width: 100%;
+#canettes-accueil, #canettes-nous-rencontrer {
+    padding: 0px;
 }
 
 /*NOUS RENCONTRER */
@@ -282,39 +313,62 @@ h1 {
     color: white;
 } */
 
-.bg-commander, h1 {
-    background-color: var(--main-bg-color);
+.formulaire {
+    width: 70%;
+    margin: auto;
     color: white;
-    padding: 40px 0 80px 0;
+}
+
+.bg-commander {
+    background-color: var(--main-bg-color);
+}
+
+.title-commander {
+    height: 184px;
+    display: flex;
+}
+
+.title-commander h1 {
+    margin: auto;
 }
 
 .divider {
     border: 0 solid white;
-    width: 860px;
     border-top-width: 1px ;
 }
 
 .commande {
-    text-align: center;
     display: flex;
+    text-align: center;
+    flex-direction: column;
 }
 
 .commande h2 {
     text-align: left;
+    padding: 0;
+    margin: 40px 0;
+}
+
+.products {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+#image-container input[type=number] {
+    margin: auto;
 }
 
 .image-container {
     background-color: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
 }
 
 .images {
-    margin-bottom: 20px;
-}
-
-.images img {
     width: 192px;
     height: 128px;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
 .quantite {
@@ -322,17 +376,24 @@ h1 {
     height: 56px !important;
     padding: 5px;
     text-align: center; /* Centrer le texte dans les champs de quantité */
+    border: none;
 }
 
 /* Section formulaire */
+
 .formulaires {
     display: flex;
     justify-content: space-around;
-    padding: 93px 0;
+    margin: 40px 0;
 }
 
-.form-wrapper {
-    margin-right: 220px 
+.form-wrapper h2 {
+    margin: 0;
+}
+
+.form-wrapper input {
+    border: none;
+    border-radius: 7px;
 }
 
 .page-id-12 .wpcf7-text {
@@ -347,9 +408,16 @@ h1 {
     position: absolute;
   }
 
-.formulaires form {
-    width: 200px;
-}
+  /* Bouton commander */
+  #button-commander {
+    display: flex;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  #button-commander input[type=submit] {
+    margin: auto;
+  }
 
 .commander {
     background-color: #E0B9B4;
@@ -363,15 +431,6 @@ h1 {
 .commander:hover {
     background-color: var(--hover-color);
 }
-
-/* .title-commander h1 {
-    background: none;
-    color: white;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-} */ 
-
 
 /* image canettes bas de page */
 .bg-canettes {
@@ -396,4 +455,156 @@ h1 {
 #menu-item-18 a {
     color: inherit;
     text-decoration: none;
+}
+
+@media screen and (768px <= width <= 960px) {
+    #header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .logo-brand {
+        margin: 5px;
+    }
+
+    #menu {
+        top: 0;
+        justify-content: space-between;
+        height: auto;
+    }
+
+    #menu ul {
+        margin: auto;
+    }
+
+    #menu ul li {
+        display: flex;
+        width: 50%;
+        height: 80px;
+
+    }#menu ul li a {
+        padding: 0;
+        margin: auto;
+    }
+
+    #menu-item-14 {
+        background-color: #DC9F96;
+    }
+
+    .site__header__menu {
+        padding: 0;
+        width: 100%;
+    }
+
+    #title-boisson h1{
+        font-size: 1rem;
+    }
+    /* Formulaire page commander */
+    .formulaire{
+        width: 100%;
+    }
+    .commande h2, .image-container{
+        margin: 20px 20px;
+    }
+    .formulaires{
+        flex-direction: column;
+    }
+    .form-wrapper{
+        margin: auto;
+    }
+    .vertical-line{
+        display: none;
+    }
+}
+
+@media screen and (width < 768px) {
+    #header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .logo-brand {
+        margin: 5px;
+    }
+
+    #menu {
+        top: 0;
+        justify-content: space-between;
+        height: auto;
+    }
+
+    #menu ul {
+        margin: auto;
+    }
+
+    #menu ul li {
+        display: flex;
+        width: 50%;
+        height: 80px;
+
+    }#menu ul li a {
+        padding: 0;
+        margin: auto;
+    }
+
+    #menu-item-14 {
+        background-color: #DC9F96;
+    }
+
+    .site__header__menu {
+        padding: 0;
+        width: 100%;
+    }
+
+    #title-boisson h1{
+        font-size: 1rem;
+    }
+
+    #title-nous-rencontrer h1{
+        font-size: 1.5rem;
+    }
+
+    .p-nous-rencontrer p {
+        margin: 0px 20px;
+    }
+    
+    .elementor-10 .elementor-element.elementor-element-63ba6d8,
+    .elementor-10 .elementor-element.elementor-element-6c18f63  {
+        margin-right: 0px;
+    }
+
+    .elementor-10 .elementor-element.elementor-element-9df1524{
+        display: none;
+    }
+
+    .form-contacter{
+        padding: 10px
+    }
+
+    /* Formulaire page commander */
+    .formulaire{
+        width: 100%;
+    }
+    #formulaire h1, #formulaire h2{
+        font-size: 26px;
+    }
+    .commande h2, .image-container, .formulaires{
+        margin: 20px 20px;
+    }
+    .formulaires{
+        flex-direction: column;
+    }
+    .form-wrapper{
+        margin: auto;
+    }
+    .vertical-line{
+        display: none;
+    }
+    .products{
+        display: flex;
+        flex-direction: column;
+    }
+    #form-input-text input{
+        width: 95%;
+    }
 }
